@@ -1,0 +1,8 @@
+{
+  "name": "Remix طبقه‌بندی جامع کنکور ارشد روانشناسی بالینی ۱۴۰۵",
+  "description": "سامانه طبقه‌بندی تحلیلی دروس، کتب مرجع و فصول کنکور کارشناسی ارشد روانشناسی بالینی وزارت علوم ۱۴۰۵ به همراه بودجه‌بندی و پیگیری مطالعه",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

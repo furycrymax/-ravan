@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="50%" stop-color="#312e81" />
+      <stop offset="100%" stop-color="#4338ca" />
+    </linearGradient>
+    <linearGradient id="brainGradLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6" />
+      <stop offset="50%" stop-color="#ec4899" />
+      <stop offset="100%" stop-color="#db2777" />
+    </linearGradient>
+    <linearGradient id="brainGradRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb7185" />
+      <stop offset="50%" stop-color="#f43f5e" />
+      <stop offset="100%" stop-color="#e11d48" />
+    </linearGradient>
+    <linearGradient id="foldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fdf2f8" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#fbcfe8" stop-opacity="0.6" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded squircle -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Subtle inner border -->
+  <rect x="8" y="8" width="496" height="496" rx="104" fill="none" stroke="#818cf8" stroke-opacity="0.2" stroke-width="4" />
+
+  <!-- Brain Emoji Icon Graphic (🧠) -->
+  <g filter="url(#glow)" transform="translate(0, -14)">
+    <!-- Central Fissure Divider Shadow -->
+    <path d="M256 120 C254 180, 252 270, 256 360" stroke="#831843" stroke-width="8" stroke-linecap="round" />
+
+    <!-- Left Hemisphere Outer Silhouette -->
+    <path d="M252 130 
+             C230 115, 195 110, 160 130 
+             C120 152, 100 195, 105 240 
+             C90 260, 85 295, 100 325 
+             C112 350, 140 365, 170 365 
+             C185 375, 220 380, 245 355 
+             C252 345, 252 330, 252 320 Z" 
+          fill="url(#brainGradLeft)" />
+
+    <!-- Right Hemisphere Outer Silhouette -->
+    <path d="M260 130 
+             C282 115, 317 110, 352 130 
+             C392 152, 412 195, 407 240 
+             C422 260, 427 295, 412 325 
+             C400 350, 372 365, 342 365 
+             C327 375, 292 380, 267 355 
+             C260 345, 260 330, 260 320 Z" 
+          fill="url(#brainGradRight)" />
+
+    <!-- Left Hemisphere Cerebral Folds & Gyri -->
+    <g fill="none" stroke="url(#foldGrad)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Frontal Lobe folds -->
+      <path d="M235 145 C200 135, 160 155, 150 185 C145 200, 160 215, 185 210 C210 205, 225 185, 245 185" />
+      <path d="M135 220 C115 235, 115 270, 140 280 C165 290, 185 260, 215 265" />
+      <!-- Temporal & Occipital Lobe folds -->
+      <path d="M125 305 C140 335, 180 345, 210 325 C230 310, 215 285, 240 285" />
+      <path d="M165 350 C190 365, 225 350, 240 330" />
+    </g>
+
+    <!-- Right Hemisphere Cerebral Folds & Gyri -->
+    <g fill="none" stroke="url(#foldGrad)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Frontal Lobe folds -->
+      <path d="M277 145 C312 135, 352 155, 362 185 C367 200, 352 215, 327 210 C302 205, 287 185, 267 185" />
+      <path d="M377 220 C397 235, 397 270, 372 280 C347 290, 327 260, 297 265" />
+      <!-- Temporal & Occipital Lobe folds -->
+      <path d="M387 305 C372 335, 332 345, 302 325 C282 310, 297 285, 272 285" />
+      <path d="M347 350 C322 365, 287 350, 272 330" />
+    </g>
+
+    <!-- Brain Stem / Spinal Cord base -->
+    <path d="M236 360 C236 395, 246 410, 256 415 C266 410, 276 395, 276 360 Z" 
+          fill="#be185d" />
+
+    <!-- Sparkles of Insight / Intelligence -->
+    <g fill="#fde047">
+      <path d="M90 145 Q105 145 105 130 Q105 145 120 145 Q105 145 105 160 Q105 145 90 145 Z" />
+      <path d="M390 135 Q405 135 405 120 Q405 135 420 135 Q405 135 405 150 Q405 135 390 135 Z" />
+      <circle cx="256" cy="100" r="6" fill="#67e8f9" />
+    </g>
+  </g>
+
+  <!-- Year Badge "۱۴۰۵" -->
+  <g transform="translate(256, 442)">
+    <rect x="-65" y="-18" width="130" height="36" rx="18" fill="#0f172a" fill-opacity="0.85" stroke="#f472b6" stroke-width="2" />
+    <text x="0" y="7" font-family="'Vazirmatn', sans-serif" font-size="20" font-weight="900" fill="#fdf2f8" text-anchor="middle" letter-spacing="2">۱۴۰۵</text>
+  </g>
+</svg>

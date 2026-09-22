@@ -1,0 +1,147 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile and study preferences for psychology master exam candidate",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "User UID from Firebase Auth"
+        },
+        "email": {
+          "type": "string",
+          "description": "User email address"
+        },
+        "displayName": {
+          "type": "string",
+          "description": "Candidate display name"
+        },
+        "photoURL": {
+          "type": "string",
+          "description": "User photo URL"
+        },
+        "targetExam": {
+          "type": "string",
+          "description": "Target exam track",
+          "enum": ["both", "health", "science"]
+        },
+        "dailyTargetHours": {
+          "type": "number",
+          "description": "Target study hours per day"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Creation timestamp ISO string"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Last updated timestamp ISO string"
+        }
+      },
+      "required": ["userId", "email"]
+    },
+    "ChapterProgress": {
+      "title": "ChapterProgress",
+      "description": "User progress, status, test scores, and notes for a specific chapter",
+      "type": "object",
+      "properties": {
+        "chapterId": {
+          "type": "string",
+          "description": "Chapter identifier matching curriculumData"
+        },
+        "userId": {
+          "type": "string",
+          "description": "User UID from Firebase Auth"
+        },
+        "status": {
+          "type": "string",
+          "description": "Study status",
+          "enum": ["not_started", "studying", "summarized", "tested", "mastered", "in_progress", "completed", "review_needed"]
+        },
+        "notes": {
+          "type": "string",
+          "description": "Personal mnemonics and high-yield notes",
+          "maxLength": 5000
+        },
+        "rating": {
+          "type": "number",
+          "description": "Mastery rating 1-5"
+        },
+        "testScore": {
+          "type": "number",
+          "description": "Self-reported test score percentage"
+        },
+        "lastStudiedAt": {
+          "type": "string",
+          "description": "Last studied timestamp ISO string"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Update timestamp ISO string"
+        }
+      },
+      "required": ["chapterId", "userId", "status"]
+    },
+    "GroundedResearch": {
+      "title": "GroundedResearch",
+      "description": "Real-time Google Search grounded exam inquiries and clinical updates",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique research ID"
+        },
+        "userId": {
+          "type": "string",
+          "description": "User UID"
+        },
+        "query": {
+          "type": "string",
+          "description": "Search query or exam topic"
+        },
+        "chapterId": {
+          "type": "string",
+          "description": "Optional associated curriculum chapter"
+        },
+        "topic": {
+          "type": "string",
+          "description": "Topic category or DSM-5/Kaplan heading"
+        },
+        "responseText": {
+          "type": "string",
+          "description": "Grounded response text from Gemini with web search citations"
+        },
+        "sources": {
+          "type": "array",
+          "description": "Citations list from Google Search grounding"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Creation timestamp ISO string"
+        }
+      },
+      "required": ["id", "userId", "query", "responseText"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": {
+        "$ref": "#/entities/UserProfile"
+      },
+      "description": "Stores user study configuration and profile"
+    },
+    "/users/{userId}/progress/{chapterId}": {
+      "schema": {
+        "$ref": "#/entities/ChapterProgress"
+      },
+      "description": "Stores per-chapter progress, notes, and mastery status"
+    },
+    "/users/{userId}/researches/{researchId}": {
+      "schema": {
+        "$ref": "#/entities/GroundedResearch"
+      },
+      "description": "Stores saved Google Search grounded AI queries and citations"
+    }
+  }
+}

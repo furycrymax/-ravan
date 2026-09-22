@@ -1,0 +1,66 @@
+{
+  "id": "/",
+  "name": "طبقه‌بندی جامع کنکور ارشد روانشناسی بالینی ۱۴۰۵",
+  "short_name": "روانشناسی۱۴۰۵",
+  "description": "سامانه جامع و آفلاین طبقه‌بندی تحلیلی دروس، دستنامه فصول کاپلان، بودجه‌بندی ۱۴۰۰ تا ۱۴۰۴، بانک آزمون و برنامه‌ریزی کنکور ارشد روانشناسی بالینی وزارت بهداشت و وزارت علوم",
+  "theme_color": "#4338ca",
+  "background_color": "#0f172a",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "dir": "rtl",
+  "lang": "fa-IR",
+  "start_url": "/",
+  "scope": "/",
+  "categories": ["education", "productivity", "reference", "books"],
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "برنامه راهبردی و بودجه‌بندی",
+      "short_name": "بودجه‌بندی",
+      "description": "تحلیل فراوانی و بودجه‌بندی فصول کنکور ۱۴۰۰ تا ۱۴۰۴",
+      "url": "/?tab=budgeting",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "دستنامه فصول کاپلان",
+      "short_name": "فصول کاپلان",
+      "description": "مطالعه کتب مرجع، فصول کاپلان و نکات کلیدی",
+      "url": "/?tab=handbook",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "بانک آزمون‌های خودسنجی",
+      "short_name": "آزمون‌ها",
+      "description": "تست‌های استاندارد با کارنامه و پاسخ تشریحی",
+      "url": "/?tab=quiz",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "تقویم و برنامه مطالعه",
+      "short_name": "تقویم",
+      "description": "برنامه‌ریزی زمانی و ثبت ساعات مطالعه هفتگی",
+      "url": "/?tab=calendar",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    }
+  ]
+}
